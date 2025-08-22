@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Hospital Management – QuickCare</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="admin-hospital.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="QuickCureLogo.jpg" alt="QuickCare Medical Logo" />
+      QuickCare
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="admin.html">Dashboard</a>
+      <a href="admin-doctor.html">Doctors</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Admin Hospital Management -->
+  <main class="container">
+    <h1>Hospital Management</h1>
+    <p class="tagline">Add, view, and manage hospitals in the system</p>
+
+    <section class="hospital-management-section">
+      <h2>Add New Hospital</h2>
+      <form id="addHospitalForm" class="hospital-form">
+        <label for="hospitalName">Hospital Name</label>
+        <input type="text" id="hospitalName" placeholder="e.g., General City Hospital" required>
+
+        <label for="hospitalType">Hospital Type</label>
+        <select id="hospitalType" required>
+          <option value="">-- Select Type --</option>
+          <option value="Govt">Government Hospital</option>
+          <option value="Private">Private Hospital</option>
+          <option value="Speciality">Speciality Clinic</option>
+          <option value="Multi-speciality">Multi-speciality Hospital</option>
+        </select>
+
+        <label for="hospitalCity">City</label>
+        <select id="hospitalCity" required>
+          <option value="">-- Choose City --</option>
+          <option value="delhi">Delhi</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="bengaluru">Bengaluru</option>
+          <option value="kolkata">Kolkata</option>
+          <option value="chennai">Chennai</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="pune">Pune</option>
+          <option value="lucknow">Lucknow</option>
+        </select>
+
+        <label for="hospitalVerified">Verification Status</label>
+        <select id="hospitalVerified" required>
+          <option value="true">Verified ✅</option>
+          <option value="false">Pending Verification ⏳</option>
+        </select>
+
+        <div class="form-actions">
+          <button type="reset" class="btn clear">Clear Form</button>
+          <button type="submit" class="btn add">Add Hospital</button>
+        </div>
+      </form>
+
+      <h2>Existing Hospitals</h2>
+      <div class="search-filter">
+        <input type="text" id="hospitalSearch" placeholder="Search hospitals by name or city..." class="search-input">
+        <select id="filterType" class="filter-select">
+          <option value="">All Types</option>
+          <option value="Govt">Government</option>
+          <option value="Private">Private</option>
+        </select>
+        <select id="filterVerification" class="filter-select">
+          <option value="">All Status</option>
+          <option value="true">Verified</option>
+          <option value="false">Pending</option>
+        </select>
+      </div>
+
+      <table id="hospitalManagementTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>City</th>
+            <th>Verified</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="hospitalListBody">
+          <!-- Hospital data will be loaded here by JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script defer src="admin-auth.js"></script>
+  <script defer src="admin-hospital.js"></script>
+  <footer>
+    <p>© 2025 QuickCare. Admin Panel.</p>
+  </footer>
+</body>
+</html>

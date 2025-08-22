@@ -1,0 +1,354 @@
+/* Import base styles */
+@import url('base.css');
+
+/* Specific styles for patient.html */
+
+/* Hero text content */
+.hero h2 {
+    font-family: 'Lexend', sans-serif;
+    color: #FFD166; /* Accent Color: sun yellow */
+    font-size: 3.8em;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6); /* More pronounced shadow */
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 45px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    color: #f0f0f0;
+}
+
+/* Booking Flow Section (Step 1: Inputs) */
+.booking-flow {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  max-width: 650px; /* Slightly wider */
+  margin: 0 auto 40px;
+  padding: 45px; /* Increased padding */
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.booking-flow h2 {
+  color: #2c3e50; /* Deep blue-gray */
+  margin-top: 0;
+  margin-bottom: 35px; /* Increased margin */
+  font-size: 2.2em; /* Slightly larger */
+}
+
+.booking-flow label {
+  display: block;
+  text-align: left;
+  margin-bottom: 15px; /* Increased margin */
+  font-weight: 600;
+  color: #2c3e50; /* Deep blue-gray */
+  font-size: 1.05em;
+}
+
+.booking-flow select {
+  width: 100%;
+  padding: 16px; /* Increased padding */
+  border: 2px solid #e1e8ed;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 30px; /* Increased margin */
+  transition: all 0.3s ease;
+}
+
+.booking-flow select:focus {
+  border-color: #3498db; /* Calming blue */
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.15); /* Slightly larger, more transparent shadow */
+  transform: translateY(-2px); /* More pronounced lift */
+}
+
+.booking-flow .btn {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); /* Calming green gradient */
+  padding: 18px 45px; /* Increased padding */
+  font-size: 1.1em; /* Slightly larger */
+  width: auto;
+  max-width: 280px; /* Slightly wider */
+  margin-top: 25px; /* Increased margin */
+  border-radius: 50px;
+}
+
+.booking-flow .btn:hover {
+  background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+  transform: translateY(-3px); /* More pronounced lift */
+}
+
+/* Hospital List Section (Step 2: Ranked Hospitals) */
+.hospital-list {
+  max-width: 1050px; /* Slightly wider */
+  margin: 0 auto 60px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.hospital-list h2 {
+  color: #2c3e50; /* Deep blue-gray */
+  text-align: center;
+  margin-bottom: 45px; /* Increased margin */
+  font-size: 2.5em; /* Slightly larger */
+}
+
+#hospitalList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increased gap */
+}
+
+.hospital-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); /* Light gradient */
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.hospital-card:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18); /* More pronounced shadow */
+}
+
+.hospital-image {
+  flex: 0 0 320px; /* Slightly wider image column */
+  position: relative;
+}
+
+.hospital-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hospital-badge {
+  position: absolute;
+  top: 18px; /* Slightly larger top margin */
+  left: 18px; /* Slightly larger left margin */
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* Red gradient */
+  color: white;
+  padding: 9px 18px; /* Slightly larger padding */
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hospital-content {
+  flex: 1;
+  padding: 35px; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased gap */
+}
+
+.hospital-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px; /* Increased gap */
+}
+
+.hospital-header h3 {
+  color: #2c3e50; /* Deep blue-gray */
+  margin: 0;
+  font-size: 1.8em; /* Slightly larger */
+  flex: 1;
+}
+
+.badge {
+  padding: 7px 14px; /* Slightly larger padding */
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.govt {
+  background: #3498db; /* Calming blue */
+  color: white;
+}
+
+.badge.private {
+  background: #9b59b6; /* Purple */
+  color: white;
+}
+
+.hospital-rating {
+  color: #f39c12; /* Orange-yellow */
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* Increased gap */
+  padding: 22px; /* Increased padding */
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+}
+
+.doctor-avatar img {
+  width: 65px; /* Slightly larger */
+  height: 65px; /* Slightly larger */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.doctor-details h4 {
+  margin: 0 0 8px; /* Increased margin */
+  color: #2c3e50; /* Deep blue-gray */
+  font-size: 1.1em; /* Slightly larger */
+}
+
+.doctor-details p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.hospital-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px; /* Increased gap */
+  margin: 12px 0; /* Increased margin */
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased gap */
+  padding: 14px; /* Increased padding */
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03); /* Added subtle shadow */
+}
+
+.meta-item .icon {
+  font-size: 18px; /* Slightly larger icon */
+  color: #3498db; /* Calming blue */
+}
+
+.hospital-contact {
+  background: #e8f6f3; /* Light green */
+  padding: 18px; /* Increased padding */
+  border-radius: 8px;
+  margin: 12px 0; /* Increased margin */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+}
+
+.hospital-contact p {
+  margin: 6px 0; /* Increased margin */
+  color: #166534; /* Dark green */
+  font-size: 14px;
+}
+
+.hcard-actions {
+  display: flex;
+  gap: 18px; /* Increased gap */
+  margin-top: auto;
+}
+
+.hcard-actions .btn {
+  flex: 1;
+  padding: 14px; /* Increased padding */
+  font-size: 1.05em; /* Slightly larger */
+  border-radius: 8px;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); /* Red gradient */
+  color: white;
+}
+
+.view-btn {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%); /* Muted gray gradient */
+  color: white;
+}
+
+.book-btn:hover, .view-btn:hover {
+  transform: translateY(-3px); /* More pronounced lift */
+}
+
+.empty-state {
+  text-align: center;
+  padding: 70px 20px; /* Increased padding */
+  color: #6c757d;
+}
+
+.empty-state img {
+  width: 110px; /* Slightly larger */
+  height: 110px; /* Slightly larger */
+  margin-bottom: 25px; /* Increased margin */
+  opacity: 0.7;
+}
+
+.empty-state h3 {
+  color: #2c3e50; /* Deep blue-gray */
+  margin-bottom: 15px; /* Increased margin */
+  font-size: 1.8em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .booking-flow {
+    padding: 35px 25px;
+    margin: 0 15px 30px;
+  }
+
+  .hospital-list {
+    padding: 0 15px;
+  }
+
+  .hospital-card {
+    flex-direction: column;
+  }
+
+  .hospital-image {
+    flex: none;
+    height: 220px; /* Slightly taller */
+  }
+
+  .hospital-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hcard-actions {
+    flex-direction: column;
+  }
+
+  .hospital-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking-flow {
+    padding: 30px 20px;
+  }
+
+  .hospital-content {
+    padding: 25px;
+  }
+
+  .doctor-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hospital-header h3 {
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose QuickCare?</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Section Heading */
+    .features h2 {
+      font-size: 28px;
+      margin: 40px 0;
+      color: #1a2a42;
+    }
+
+    /* Cards Container */
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    /* Individual Card */
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      width: 300px;
+      height: 320px; /* fixed equal height */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  /* vertical center */
+      align-items: center;      /* horizontal center */
+      text-align: center;
+
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Image in Card */
+    .card-image {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-image img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Card Title */
+    .card h3 {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #1a2a42;
+    }
+
+    /* Card Text */
+    .card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="features">
+    <h2>Why Choose QuickCare?</h2>
+    <div class="card-container">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="images/book.png" alt="Instant Booking">
+        </div>
+        <h3>Instant Booking</h3>
+        <p>Book appointments with verified doctors in less than 60 seconds.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="images/doctors.png" alt="Verified Doctors">
+        </div>
+        <h3>Verified Doctors</h3>
+        <p>All doctors are thoroughly verified and rated by real patients.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="images/mobile.png" alt="Mobile Friendly">
+        </div>
+        <h3>Mobile Friendly</h3>
+        <p>Access your appointments from any device, anywhere, anytime.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

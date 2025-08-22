@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickCare – Patient Booking</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="patient.css" />
+</head>
+<body>
+  <!-- Navbar (no Doctor/Admin links here) -->
+  <header class="navbar">
+        <div class="logo">
+                <a href="index.html" class="logo-link">
+  <img src="QuickCureLogo.jpg" 
+       alt="QuickCare – Instant Medical Appointments Logo" 
+       class="logo-img" 
+       onerror="this.style.display='none'" />
+  <span class="logo-text">QuickCare</span>
+</a>
+
+    </div>
+    <nav>
+      <a class="signin-link" href="signin.html">Sign In</a>
+      <a class="signup-link" href="signup.html">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+    <section>
+<h1 style="text-align: center; color: #2E8B57;">Your Health, Our Priority</h1>
+
+</section>
+  <!-- Step 1: Inputs -->
+  <section class="booking-flow" id="bookingStep">
+    <h2>Select Your Preferences</h2>
+
+    <label for="specialty">Medical Specialty</label>
+    <select id="specialty">
+      <option value="">-- Choose Specialty --</option>
+      <option value="cardiology">Cardiology</option>
+      <option value="dermatology">Dermatology</option>
+      <option value="orthopedics">Orthopedics</option>
+      <option value="pediatrics">Pediatrics</option>
+      <option value="ent">ENT (Ear, Nose, Throat)</option>
+      <option value="psychiatry">Psychiatry</option>
+      <option value="general">General Physician</option>
+      <option value="neurology">Neurology</option>
+      <option value="oncology">Oncology</option>
+      <option value="gynecology">Gynecology</option>
+    </select>
+
+    <label for="city">City</label>
+    <select id="city">
+      <option value="">-- Choose City --</option>
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+      <option value="bengaluru">Bengaluru</option>
+      <option value="kolkata">Kolkata</option>
+      <option value="chennai">Chennai</option>
+      <option value="hyderabad">Hyderabad</option>
+      <option value="pune">Pune</option>
+      <option value="lucknow">Lucknow</option>
+    </select>
+
+    <button id="nextBtn" class="btn">Find Available Doctors</button>
+  </section>
+
+  <!-- Step 2: Ranked Hospitals -->
+  <section class="hospital-list" id="hospitalSection" style="display:none;">
+    <h2>Recommended Hospitals & Doctors</h2>
+    <p style="text-align:center;color:#6c757d;margin-bottom:30px;">Sorted by earliest availability and best ratings</p>
+    <div id="hospitalList"></div>
+  </section>
+  
+  <script defer src="app.js"></script>
+  <footer>
+    <p>© 2025 QuickCare. Your health is our priority.</p>
+  </footer>
+</body>
+</html>
