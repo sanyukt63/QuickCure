@@ -1,0 +1,2 @@
+# QuickCure
+Healthcare Management System
